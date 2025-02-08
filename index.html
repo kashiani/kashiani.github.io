@@ -26,16 +26,16 @@
 	  }
 
 	  /* White particle background */
-	  #particles-js {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		left: 0px;
-		top: 0px;
-		z-index: -1;
-		background-color: #ffffff; /* White background */
-	  }
-
+		#particles-js {
+		  position: fixed;
+		  width: 100%;
+		  height: 100%;
+		  left: 0px;
+		  top: 0px;
+		  z-index: -1;
+		  background-color: #ffffff;
+		  pointer-events: auto; /* Ensures mouse events are captured */
+		}
 	  .particle, .particle > canvas, #particles-js {
 		z-index: -1 !important;
 	  }
@@ -104,6 +104,7 @@
                   <div class="news">
                     <ul style="text-align:justify;height: 150px;">
 					  <li class="font">[2024/11] Two papers have been accepted at WACV 2025. </li>
+		      <li class="font">[2024/11] Successfully passed Qualifying Exam. </li>
                       <li class="font"><font color="black">[2024/06] My new paper <a href="https://arxiv.org/pdf/2401.03037" target="_blank">CATFace</a> is accepted by IEEE Transactions on Biometrics, Behavior, and Identity Science.</font></li>
                       <li class="font">[2024/02] AAFACE is accepted at IEEE ICIP 2023.</li>
                       <li class="font">[2023/11] <a href="https://github.com/Omid-Nejati/MedViT" target="_blank">MedViT</a> has been featured in Computers in Biology and Medicine.</li>
@@ -793,127 +794,193 @@
     </tbody>
   </table>
 
-  <!-- Include particles.js -->
-  <script src="particles.js"></script>
+<!-- Include particles.js -->
+<script src="particles.js"></script>
 
-  <!-- Direct particle configuration with mouse interaction and repulse -->
-  <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 50,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#000000"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 8
-          },
-        },
-        "opacity": {
-          "value": 0.35,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 25,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
+<!-- Particle configuration with custom repulsion -->
+<script>
+/* global particlesJS */
+
+var particleSettings = {
+  "particles": {
+    "number": {
+      "value": 50, // From your config
+      "density": {
+        "enable": true,
+        "value_area": 220 // From your config
+      }
+    },
+    "color": {
+      "value": "#27ae60" // Default, will be overridden by randomColor
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#27ae60"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 2,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#8e8e8e",
+      "opacity": 0.4,
+      "width": 1 // From your config
+    },
+    "move": {
+      "enable": true,
+      "speed": 2, // From your config
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false, // From your config
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push" // Will be overridden by custom repulsion
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
         "line_linked": {
-          "enable": true,
-          "distance": 250,
-          "color": "#000000",
-          "opacity": 0.35,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": true,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": true,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
+          "opacity": 1
         }
       },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 100,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 20,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
       },
-      "retina_detect": true
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+};
+
+// Define color options
+var colors = {
+  'green': '#1772d0'
+};
+
+// Select a random color
+    var randomColor = colors[Object.keys(colors)[Math.floor(Math.random() * Object.keys(colors).length)]];
+    particleSettings.particles.color.value = randomColor;
+
+    // Initialize particles with the settings
+    particlesJS("particles-js", particleSettings);
+
+    // Custom function to repulse particles from the cursor
+    function repulseParticlesFromCursor() {
+      const pJS = window.pJSDom[0].pJS;
+
+      document.addEventListener('mousemove', function(e) {
+        const canvas = pJS.canvas.el;
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = (e.clientX - rect.left) * pJS.canvas.pxratio;
+        const mouseY = (e.clientY - rect.top) * pJS.canvas.pxratio;
+
+        pJS.particles.array.forEach(particle => {
+          const dx = mouseX - particle.x;
+          const dy = mouseY - particle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const maxDistance = 400;
+
+          if (distance < maxDistance) {
+            const force = (maxDistance - distance) / maxDistance;
+            const speed = 0.05;
+            particle.vx = -dx * force * speed; // Negated for repulsion
+            particle.vy = -dy * force * speed; // Negated for repulsion
+            const maxSpeed = 1.7;
+            particle.vx = Math.max(Math.min(particle.vx, maxSpeed), -maxSpeed);
+            particle.vy = Math.max(Math.min(particle.vy, maxSpeed), -maxSpeed);
+          }
+        });
+      });
+
+      document.addEventListener('mouseleave', function() {
+        pJS.particles.array.forEach(particle => {
+          particle.vx = particle.vx_i;
+          particle.vy = particle.vy_i;
+        });
+      });
+    }
+
+    repulseParticlesFromCursor();
+
+    // Update link colors to match particle color
+    document.addEventListener("DOMContentLoaded", function() {
+      var elements = document.querySelectorAll('a');
+      [].forEach.call(elements, function(value) {
+        value.style.color = randomColor;
+      });
     });
 
     // Function to hide particles and reveal publications when scrolled
-    window.onscroll = function() {
-      let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-      // If scrolled down 1px, remove particles and show publications
-      if (scrollY > 1) {
-        document.getElementById('particles-js').style.display = 'none'; // Remove particle background
-        document.getElementById('publications').classList.add('show');   // Reveal publications
-      }
-    };
+
+	window.onscroll = function() {
+  let scrollY = window.scrollY || document.documentElement.scrollTop;
+  if (scrollY > 1) {
+    document.getElementById('particles-js').style.display = 'none';
+    document.getElementById('publications').classList.add('show');
+  }
+};
+
   </script>
 </body>
 </html>
