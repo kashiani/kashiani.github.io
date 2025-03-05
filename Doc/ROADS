@@ -1,0 +1,8 @@
+@InProceedings{Kashiani_2025_WACV,
+    author    = {Kashiani, Hossein and Talemi, Niloufar Alipour and Afghah, Fatemeh},
+    title     = {ROADS: Robust Prompt-Driven Multi-Class Anomaly Detection under Domain Shift},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {February},
+    year      = {2025},
+    pages     = {7897-7906}
+}

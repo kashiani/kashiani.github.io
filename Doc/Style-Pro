@@ -1,0 +1,8 @@
+@InProceedings{Talemi_2025_WACV,
+    author    = {Talemi, Niloufar Alipour and Kashiani, Hossein and Afghah, Fatemeh},
+    title     = {Style-Pro: Style-Guided Prompt Learning for Generalizable Vision-Language Models},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {February},
+    year      = {2025},
+    pages     = {6207-6216}
+}
