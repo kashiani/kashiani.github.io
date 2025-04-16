@@ -987,7 +987,7 @@ var colors = {
             const speed = 0.05;
             particle.vx = -dx * force * speed; // Negated for repulsion
             particle.vy = -dy * force * speed; // Negated for repulsion
-            const maxSpeed = 1.2;
+            const maxSpeed = 1.05;
             particle.vx = Math.max(Math.min(particle.vx, maxSpeed), -maxSpeed);
             particle.vy = Math.max(Math.min(particle.vy, maxSpeed), -maxSpeed);
           }
