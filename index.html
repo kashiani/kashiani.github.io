@@ -3,15 +3,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYEK75ZVZX"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYEK75ZVZX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-	  gtag('config', 'G-FYEK75ZVZX');
-	</script>
+      gtag('config', 'G-FYEK75ZVZX');
+    </script>
 
 
   <title>Hossein Kashiani</title>
@@ -19,87 +18,147 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="png" href="Doc/icon.png">
 
-	<style>
-	  /* Ensure z-index layering for content */
-	  * {
-		z-index: 2;
-	  }
+    <style>
+      /* Add smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
 
-	  /* White particle background */
-		#particles-js {
-		  position: fixed;
-		  width: 100%;
-		  height: 100%;
-		  left: 0px;
-		  top: 0px;
-		  z-index: -1;
-		  background-color: #ffffff;
-		  pointer-events: auto; /* Ensures mouse events are captured */
-		}
-	  .particle, .particle > canvas, #particles-js {
-		z-index: -1 !important;
-	  }
+      /* Navigation Bar Styles */
+      .navigation {
+        background-color: #ffffff;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
 
-		.news {
-		  margin-top: -5px; /* Reduce space before the News section */
-			}
+      .navigation a {
+        color: #1772d0;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px; /* Reduced font size */
+      }
+
+      .navigation a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Ensure z-index layering for content */
+      * {
+       z-index: 2;
+      }
+
+      /* White particle background */
+       #particles-js {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         left: 0px;
+         top: 0px;
+         z-index: -1;
+         background-color: #ffffff;
+         pointer-events: auto; /* Ensures mouse events are captured */
+       }
+      .particle, .particle > canvas, #particles-js {
+       z-index: -1 !important;
+      }
+
+    #center-fade {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px; /* Same max-width as your main content */
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.92); /* Semi-transparent white */
+      z-index: 1; /* Sits between particles (-1) and content (2) */
+      pointer-events: none; /* Allows mouse clicks to pass through */
+    }
+
+       .news {
+         margin-top: -5px; /* Reduce space before the News section */
+          }
+
+      /* Set body background color and base font size */
+      body {
+       background-color: #ffffff;
+       padding-top: 50px; /* Add padding to prevent content from being hidden by the fixed navbar */
+      }
+
+      /* --- FONT SIZE OVERRIDE FOR ALL TEXT --- */
+      body, p, li, td, strong, em, .font, a {
+        font-size: 14px !important; /* Force smaller font size on all text elements */
+      }
+
+      /* Adjust custom tag font sizes */
+      name {
+        font-size: 26px !important; /* Further reduced heading size */
+      }
+      heading {
+        font-size: 20px !important; /* Further reduced section heading size */
+      }
+      papertitle {
+        font-size: 15px !important; /* Further reduced publication title size */
+      }
+
+      /* Keep navigation text size distinct */
+      .navigation a {
+        font-size: 15px !important;
+      }
 
 
-	  /* Initially hide the publication section */
-	  #publications {
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 1s ease-in-out, visibility 0s linear 1s;
-	  }
+       @media only screen and (max-width: 768px) {
+         td[style*="width:63%"], td[style*="width:40%"] {
+          display: block;
+          width: 100% !important;
+          padding: 5% !important;
+         }
 
-	  /* Show publications when scrolled */
-	  #publications.show {
-		opacity: 1;
-		visibility: visible;
-		transition: opacity 1s ease-in-out, visibility 0s linear 0s;
-	  }
+         .news ul {
+          height: auto !important;
+         }
 
-	  /* Set body background color to white */
-	  body {
-		background-color: #ffffff;
-	  }
-		@media only screen and (max-width: 768px) {
-		  td[style*="width:63%"], td[style*="width:40%"] {
-			display: block;
-			width: 100% !important;
-			padding: 5% !important;
-		  }
+         img {
+          width: 100% !important;
+          height: auto !important;
+         }
 
-		  .news ul {
-			height: auto !important;
-		  }
+         #publications table {
+          width: 100% !important;
+          display: block;
+          overflow-x: auto;
+         }
 
-		  img {
-			width: 100% !important;
-			height: auto !important;
-		  }
+         .image-container img {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+         }
+       }
 
-		  #publications table {
-			width: 100% !important;
-			display: block;
-			overflow-x: auto;
-		  }
-
-		  .image-container img {
-			width: 100% !important;
-			max-width: 100% !important;
-			height: auto !important;
-		  }
-		}
-
-	</style>
+    </style>
 
 </head>
 
 <body>
-  <!-- Particle background -->
-  <div id="particles-js"></div>
+  <div class="navigation">
+    <a href="#news">News</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#academic-service">Academic Service</a>
+  </div>
 
+  <div id="particles-js"></div>
+  <div id="center-fade"></div>
+
+  <div style="position: relative; margin-top: -30px;">
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
       <tr style="padding:0px">
@@ -107,19 +166,19 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr style="padding:0px">
-                <td style="padding:3%;width:63%;text-align: justify">
+                <td style="padding:3%; padding-top: 0; width:63%;text-align: justify">
                   <p style="text-align:center">
                     <name>Hossein Kashiani</name>
                   </p>
                   <p>
-						I am a fourth-year Ph.D. student in the <a href='https://iswin-lab-clemson.github.io/Home.html'>IS-WiN Lab</a> at <a href='https://www.clemson.edu/index.html'>Clemson University</a> (CU), advised by Dr. <a href='https://scholar.google.com/citations?hl=en&user=67mA71QAAAAJ&view_op=list_works&sortby=pubdate'>Fatemeh Afghah</a>. Before joining CU, I worked as a research assistant on biometrics at <a href="https://www.wvu.edu/">West Virginia University</a>. I completed my Master's degree in Electrical Engineering at <a href='https://www.iust.ac.ir/en'>Iran University of Science & Technology</a>. My research focuses on enhancing the generalization of machine learning models to unseen domains, with applications spanning various areas, including anomaly detection, biometrics, healthcare, visual perception tasks, and scene understanding.
+                   I am a fourth-year Ph.D. student in the <a href='https://iswin-lab-clemson.github.io/Home.html'>IS-WiN Lab</a> at <a href='https://www.clemson.edu/index.html'>Clemson University</a> (CU), advised by Dr. <a href='https://scholar.google.com/citations?hl=en&user=67mA71QAAAAJ&view_op=list_works&sortby=pubdate'>Fatemeh Afghah</a>. Before joining CU, I worked as a research assistant on biometrics at <a href="https://www.wvu.edu/">West Virginia University</a>. I completed my Master's degree in Electrical Engineering at <a href='https://www.iust.ac.ir/en'>Iran University of Science & Technology</a>. My research focuses on enhancing the generalization of machine learning models to unseen domains, with applications spanning various areas, including anomaly detection, biometrics, healthcare, visual perception tasks, and scene understanding.
                   </p>
                   <p style="text-align:center">
-                    <a href="mailto:kashianihossein@gmail.com">Email</a> &nbsp/&nbsp
-                    <a href="https://scholar.google.com/citations?hl=en&user=koUqDrgAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp/&nbsp
-					<a href="https://github.com/kashiani">Github</a>&nbsp/&nbsp
-                    <a href="https://www.linkedin.com/in/hossein-kashiani/">LinkedIn</a> &nbsp/&nbsp
-					<a href="https://x.com/Hossein_serein">Twitter</a>
+                    <a href="mailto:kashianihossein@gmail.com">Email</a>  / 
+                    <a href="https://scholar.google.com/citations?hl=en&user=koUqDrgAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>  / 
+                <a href="https://github.com/kashiani">Github</a> / 
+                    <a href="https://www.linkedin.com/in/hossein-kashiani/">LinkedIn</a>  / 
+                <a href="https://x.com/Hossein_serein">Twitter</a>
                   </p>
                 </td>
                 <td style="padding:2.5%;width:40%;max-width:40%">
@@ -129,23 +188,24 @@
             </tbody>
           </table>
 
-          <!-- News Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table id="news" style="margin-top: -50px; width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
             <tbody>
+              <tr>
               <tr>
                 <td style="padding:0px;width:100%;vertical-align:middle">
                   <heading>News</heading>
                   <div class="news">
                     <ul style="text-align:justify;height: 150px;">
-			<li class="font">[2025/05] One paper on Vision-Language Models has been accepted at KDD 2025.</li>
-			<li class="font">[2025/02] FreqDebias has been accepted at CVPR 2025. </li>
-			<li class="font">[2024/11] Two papers have been accepted at WACV 2025. </li>
-		      <li class="font">[2024/11] Successfully passed Qualifying Exam. </li>
+          <li class="font">[2025/05] One paper on Vision-Language Models has been accepted at KDD 2025.</li>
+          <li class="font">[2025/02] FreqDebias has been accepted at CVPR 2025. </li>
+          <li class="font">[2024/11] Two papers have been accepted at WACV 2025. </li>
+             <li class="font">[2024/11] Successfully passed Qualifying Exam. </li>
                       <li class="font"><font color="black">[2024/06] My new paper <a href="https://arxiv.org/pdf/2401.03037" target="_blank">CATFace</a> is accepted by IEEE Transactions on Biometrics, Behavior, and Identity Science.</font></li>
                       <li class="font">[2024/02] AAFACE is accepted at IEEE ICIP 2023.</li>
                       <li class="font">[2023/11] <a href="https://github.com/Omid-Nejati/MedViT" target="_blank">MedViT</a> has been featured in Computers in Biology and Medicine.</li>
                       <li class="font">[2023/09] Our new method on Morph Attack Detection has been accepted by IJCB 2023.</li>
-					  <li class="font">[2023/03] Our <a href="https://arxiv.org/pdf/2209.08130" target="_blank">face morphing detector</a> ranks among the top in NIST's Face Recognition Vendor Test (<a href="https://pages.nist.gov/frvt/html/frvt_morph.html" target="_blank">FRVT</a>).</li>
+                  <li class="font">[2023/03] Our <a href="https://arxiv.org/pdf/2209.08130" target="_blank">face morphing detector</a> ranks among the top in NIST's Face Recognition Vendor Test (<a href="https://pages.nist.gov/frvt/html/frvt_morph.html" target="_blank">FRVT</a>).</li>
                     </ul>
                   </div>
                 </td>
@@ -154,57 +214,54 @@
           </table>
 
 
-<!-- Research Section with Scholar Metrics -->
-<table class="content-table" style="margin-top: 0; padding-top: 0;">
+<table id="research" class="content-table" style="margin-top: 0; padding-top: 0;">
   <tbody>
     <tr>
       <td style="padding:0px;width:100%;vertical-align:middle; text-align: center;">
         <heading>Research</heading>
-			<p style="text-align: justify;">
-			My current research focuses on advancing Multimodal Large Language Models to enhance the robustness and adaptability of anomaly detection in few-shot settings and provide detailed descriptions of each detected irregularity. My prior work at CU includes developing advanced prompting techniques for Vision-Language models and robust multi-class anomaly detection.
-			</p>
-			<p style="text-align: justify;">
-			At WVU, in collaboration with CITER and NIST, I explored advanced security measures for automated face recognition systems, focusing on robust <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark" target="_blank">detection </a> and <a href="https://github.com/kashiani/Morph-Attack-Synthesis" target="_blank">generation </a> of face morphing attacks. Additionally, I worked on multimodal biometric recognition under long-range constraints to address issues related to turbulent, low-quality imagery from extended distances.
-			</p>
-			<p style="text-align: justify;">
-			I also engaged in advancing Vision Transformers for healthcare at IUST. This includes developing  <a href="https://github.com/Omid-Nejati/MedViT" target="_blank">hybrid Transformers</a>  with locality inductive biases for medical imaging; enhancing adversarial robustness with innovative data augmentation techniques like <a href="https://github.com/Omid-Nejati/Locality-iN-Locality" target="_blank">Moment Exchanger and Patch Momentum Changer</a>; improving local and global dependencies within Transformer architectures.
-			</p>
-			<p style="text-align: justify;">
-			Beyond these areas, my research extends to visual perception and scene understanding, such as object <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113" target="_blank">tracking</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417421008368" target="_blank">detection</a>, and <a href="https://ieeexplore.ieee.org/iel7/6287639/9312710/09522137.pdf" target="_blank">segmentation</a>. This includes enhancing the robustness, generalization, and adaptability of perception models such as object detection and semantic segmentation for autonomous vehicles; developing multi-teacher knowledge distillation framework to enhance the performance of lightweight perception models, ensuring they operate effectively in challenging environments.
-			</p>
-        <!-- Scholar Metrics Section -->
+          <p style="text-align: justify;">
+          My current research focuses on advancing Multimodal Large Language Models to enhance the robustness and adaptability of anomaly detection in few-shot settings and provide detailed descriptions of each detected irregularity. My prior work at CU includes developing advanced prompting techniques for Vision-Language models and robust multi-class anomaly detection.
+          </p>
+          <p style="text-align: justify;">
+          At WVU, in collaboration with CITER and NIST, I explored advanced security measures for automated face recognition systems, focusing on robust <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark" target="_blank">detection </a> and <a href="https://github.com/kashiani/Morph-Attack-Synthesis" target="_blank">generation </a> of face morphing attacks. Additionally, I worked on multimodal biometric recognition under long-range constraints to address issues related to turbulent, low-quality imagery from extended distances.
+          </p>
+          <p style="text-align: justify;">
+          I also engaged in advancing Vision Transformers for healthcare at IUST. This includes developing  <a href="https://github.com/Omid-Nejati/MedViT" target="_blank">hybrid Transformers</a>  with locality inductive biases for medical imaging; enhancing adversarial robustness with innovative data augmentation techniques like <a href="https://github.com/Omid-Nejati/Locality-iN-Locality" target="_blank">Moment Exchanger and Patch Momentum Changer</a>; improving local and global dependencies within Transformer architectures.
+          </p>
+          <p style="text-align: justify;">
+          Beyond these areas, my research extends to visual perception and scene understanding, such as object <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113" target="_blank">tracking</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417421008368" target="_blank">detection</a>, and <a href="https://ieeexplore.ieee.org/iel7/6287639/9312710/09522137.pdf" target="_blank">segmentation</a>. This includes enhancing the robustness, generalization, and adaptability of perception models such as object detection and semantic segmentation for autonomous vehicles; developing multi-teacher knowledge distillation framework to enhance the performance of lightweight perception models, ensuring they operate effectively in challenging environments.
+          </p>
         <div id="scholar-metrics" style="background-color: #f0f0f0; border-radius: 10px; padding: 10px; margin: auto; display: inline-block;">
           Citations: <span id="citation-count">0</span> | H-Index: <span id="h-index">0</span> | i10-Index: <span id="i10-index">0</span>
         </div>
 
-        <!-- JavaScript to load and animate scholar metrics -->
-		  <script>
-		  async function loadScholarData() {
-			  const response = await fetch("scholar_data.json");
-			  const data = await response.json();
+        <script>
+         async function loadScholarData() {
+            const response = await fetch("scholar_data.json");
+            const data = await response.json();
 
-			  const duration = 2000;
-			  const startTime = new Date().getTime();
+            const duration = 2000;
+            const startTime = new Date().getTime();
 
-			  function countUp() {
-				  const currentTime = new Date().getTime();
-				  const elapsed = currentTime - startTime;
-				  const progress = Math.min(elapsed / duration, 1);
+            function countUp() {
+               const currentTime = new Date().getTime();
+               const elapsed = currentTime - startTime;
+               const progress = Math.min(elapsed / duration, 1);
 
-				  document.getElementById("citation-count").innerText = Math.round(data.citations * progress);
-				  document.getElementById("h-index").innerText = Math.round(data.h_index * progress);
-				  document.getElementById("i10-index").innerText = Math.round(data.i10_index * progress);
+               document.getElementById("citation-count").innerText = Math.round(data.citations * progress);
+               document.getElementById("h-index").innerText = Math.round(data.h_index * progress);
+               document.getElementById("i10-index").innerText = Math.round(data.i10_index * progress);
 
-				  if (progress < 1) {
-					  requestAnimationFrame(countUp);
-				  }
-			  }
+               if (progress < 1) {
+                  requestAnimationFrame(countUp);
+               }
+            }
 
-			  countUp();
-		  }
+            countUp();
+         }
 
-		  loadScholarData();
-		  </script>
+         loadScholarData();
+         </script>
       </td>
     </tr>
   </tbody>
@@ -213,7 +270,6 @@
 
 
 
-          <!-- Publications Section (Now wrapped inside div with id="publications") -->
           <div id="publications">
             <table style="width:100%">
               <tbody>
@@ -228,171 +284,220 @@
             <table style="width:120%">
               <tbody>
 
-				<!-- New Publication: Style-Pro -->
-				<tr onmouseout="tcd_stop_stylepro()" onmouseover="tcd_start_stylepro()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="paper_stylepro" src="Doc/stylepro.png" alt="Image of Style-Pro Paper" width="200" style="border-style: none">
-					</div>
-
-					<script type="text/javascript">
-					  // Function to change the image when hovered (Style-Pro)
-					  function tcd_start_stylepro() {
-						document.getElementById('paper_stylepro').src = "Doc/stylepro.png"; // Change to a different image if needed
-					  }
-
-					  // Function to revert back to the original image (Style-Pro)
-					  function tcd_stop_stylepro() {
-						document.getElementById('paper_stylepro').src = "Doc/stylepro.png"; // Change to a different image if needed
-					  }
-					</script>
-				  </td>
-
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://arxiv.org/abs/2411.16018" id="StylePro_journal">
-					  <papertitle style="color:#1772d0;">Style-Pro: Style-Guided Prompt Learning for Generalizable Vision-Language Models.</papertitle>
+			<tr>
+				<td style="padding:10px;width:25%;vertical-align:top">
+					<img src="Doc/FreqDebias2.png" alt="FreqDebias Paper" width="200" style="border-style: none">
+				</td>
+				<td style="padding-bottom:35px;width:75%;vertical-align:middle">
+					<a href="https://openaccess.thecvf.com/content/CVPR2025/html/Kashiani_FreqDebias_Towards_Generalizable_Deepfake_Detection_via_Consistency-Driven_Frequency_Debiasing_CVPR_2025_paper.html" id="FreqDebias_journal">
+						<papertitle style="color:#1772d0;">FreqDebias: Towards Generalizable Deepfake Detection via Consistency-Driven Frequency Debiasing</papertitle>
 					</a>
 					<br>
-					<strong>NA Talemi, H Kashiani, F Afghah</strong>
+					<strong>Hossein Kashiani, Niloufar Alipour Talemi, Fatemeh Afghah</strong>
 					<br>
-					<em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2025.
+					<em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025.
 					<br>
-				  	<a href="https://openaccess.thecvf.com/content/WACV2025/papers/Talemi_Style-Pro_Style-Guided_Prompt_Learning_for_Generalizable_Vision-Language_Models_WACV_2025_paper.pdf">CVF</a> /
-					<a href="https://arxiv.org/abs/2411.16018">arxiv</a> /
-				  	<a href="Doc/Poster_StylePro_WACV2025.pdf">Poster</a>/
-				  	<a href="Doc/Style-Pro">bibtex</a>
+					<a href="https://openaccess.thecvf.com/content/CVPR2025/html/Kashiani_FreqDebias_Towards_Generalizable_Deepfake_Detection_via_Consistency-Driven_Frequency_Debiasing_CVPR_2025_paper.html">CVF</a> /
+					<a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Kashiani_FreqDebias_Towards_Generalizable_Deepfake_Detection_via_Consistency-Driven_Frequency_Debiasing_CVPR_2025_paper.pdf">PDF</a> /
+					<a href="https://openaccess.thecvf.com/content/CVPR2025/supplemental/Kashiani_FreqDebias_Towards_Generalizable_CVPR_2025_supplemental.pdf">Suppl</a> /
+					<a href="https://www.youtube.com/watch?v=SHThZg1zcac">Video</a> /
+					<a href="https://cvpr.thecvf.com/virtual/2025/poster/33990">Poster</a> /
+					<a href="https://openaccess.thecvf.com/content/CVPR2025/bibtex/Kashiani_FreqDebias_Towards_Generalizable_Deepfake_Detection_via_Consistency-Driven_Frequency_Debiasing_CVPR_2025_paper.bib">BibTeX</a>
 					<p align="justify">
-					  We propose a style-guided prompt learning framework to enhance generalization in Vision-Language models.
+						We introduce a novel frequency-domain debiasing framework that uses consistency regularization to improve the generalization of deepfake detectors to unseen manipulations.
 					</p>
-				  </td>
-				</tr>
+				</td>
+			</tr>
+			<tr onmouseout="tcd_stop_DiSa()" onmouseover="tcd_start_DiSa()">
+				<td style="padding:10px;width:25%;vertical-align:top">
+				  <div class="image-container">
+					<img id="paper_DiSa" src="Doc/DiSa_overview.png" alt="Image of DiSa Paper" width="200" style="border-style: none">
+				  </div>
 
+				  <script type="text/javascript">
+					// Function to change the image when hovered (DiSa)
+					function tcd_start_DiSa() {
+					  document.getElementById('paper_DiSa').src = "Doc/DiSa_overview.png"; // Change to a different image if needed
+					}
 
-			  <!-- New Publication: ROADS -->
-				<tr onmouseout="tcd_stop_roads()" onmouseover="tcd_start_roads()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="paper_an" src="Doc/anomaly_1.png" alt="Image of ROADS Paper" width="200" style="border-style: none">
-					</div>
-
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start_roads() {
-						document.getElementById('paper_an').src = "Doc/anomaly_2.jpg";
-					  }
-
-					  // Function to revert back to the original image
-					  function tcd_stop_roads() {
-						document.getElementById('paper_an').src = "Doc/anomaly_1.png";
-					  }
-					</script>
-				  </td>
-
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://arxiv.org/abs/2411.16049" id="ROADS_journal">
-					  <papertitle style="color:#1772d0;">ROADS: Robust Prompt-driven Multi-Class Anomaly Detection under Domain Shift.</papertitle>
+					// Function to revert back to the original image (DiSa)
+					function tcd_stop_DiSa() {
+					  document.getElementById('paper_DiSa').src = "Doc/DiSa_overview.png"; // Change to a different image if needed
+					}
+				  </script>
+				</td>
+				<td style="padding-bottom:35px;width:75%;vertical-align:middle">
+					<a href="https://arxiv.org/abs/2505.19373">
+					  <papertitle style="color:#1772d0;">DiSa: Directional Saliency-Aware Prompt Learning for Generalizable Vision-Language Models</papertitle>
 					</a>
 					<br>
-					<strong>H Kashiani, NA Talemi, F Afghah</strong>
+					<strong>Niloufar Alipour Talemi, Hossein Kashiani, Hossein R Nowdeh, Fatemeh Afghah</strong>
 					<br>
-					<em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2025.
+					<em>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</em>, 2025.
 					<br>
-					<a href="https://openaccess.thecvf.com/content/WACV2025/papers/Kashiani_ROADS_Robust_Prompt-Driven_Multi-Class_Anomaly_Detection_under_Domain_Shift_WACV_2025_paper.pdf">CVF</a> /
-					<a href="https://arxiv.org/abs/2411.16049">arxiv</a> /
-					<a href="Doc/Poster_ROADS_WACV2025.pdf">Poster</a> /
-				  	<a href="Doc/ROADS">bibtex</a>
-
+					<a href="https://arxiv.org/abs/2505.19373">arxiv</a> /
+					<a href="https://arxiv.org/pdf/2505.19373">pdf</a>
 					<p align="justify">
-					   We propose a robust multi-class anomaly detection framework with a class-aware prompt integration mechanism to mitigate inter-class interference and a domain adapter to handle domain shifts.
+					  We propose DiSa, a directional saliency-aware prompt learning framework that improves generalization in vision-language models by integrating cross-interactive regularization and directional regularization strategies.
 					</p>
-				  </td>
-				</tr>
-
-
-				<!-- New Publication: CATFace -->
-				<tr onmouseout="tcd_stop()" onmouseover="tcd_start()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="paper-img" src="Doc/CATFACE_1.png" alt="CATFace" width="200" style="border-style: none">
-					</div>
-
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start() {
-						document.getElementById('paper-img').src = "Doc/CATFACE__2.png";
-					  }
-
-					  // Function to revert back to the original image
-					  function tcd_stop() {
-						document.getElementById('paper-img').src = "Doc/CATFACE_1.png";
-					  }
-					</script>
-				  </td>
-
-			  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-				<a href="https://arxiv.org/pdf/2401.03037" id="CATFace_journal">
-				  <papertitle style="color:#1772d0;">CATFace: Cross-Attribute-Guided Transformer With Self-Attention Distillation for Low-Quality Face Recognition.</papertitle>
-				</a>
-				<br>
-				<strong>NA Talemi, H Kashiani, NM Nasrabadi</strong>
-				<br>
-				<em>IEEE Transactions on Biometrics, Behavior, and Identity Science</em>, 2024.
-				<br>
-				<a href="https://arxiv.org/pdf/2401.03037">arxiv</a> /
-				<a href="https://ieeexplore.ieee.org/abstract/document/10380201/">IEEE</a> /
-				<a href="Doc/catface.bib">bibtex</a>
-				<!--<a href="https://github.com/kashiani/CATFace">code</a>-->
-				<p align="justify">
-				  We propose a novel multi-branch network with cross-attribute-guided fusion and self-attention distillation, improving face recognition in low-quality images using soft biometric attributes.
-				</p>
-			  </td>
+				</td>
 			</tr>
+			<tr onmouseout="tcd_stop_stylepro()" onmouseover="tcd_start_stylepro()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="paper_stylepro" src="Doc/stylepro.png" alt="Image of Style-Pro Paper" width="200" style="border-style: none">
+                </div>
+
+                <script type="text/javascript">
+                  // Function to change the image when hovered (Style-Pro)
+                  function tcd_start_stylepro() {
+                   document.getElementById('paper_stylepro').src = "Doc/stylepro.png"; // Change to a different image if needed
+                  }
+
+                  // Function to revert back to the original image (Style-Pro)
+                  function tcd_stop_stylepro() {
+                   document.getElementById('paper_stylepro').src = "Doc/stylepro.png"; // Change to a different image if needed
+                  }
+                </script>
+               </td>
+
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2411.16018" id="StylePro_journal">
+                  <papertitle style="color:#1772d0;">Style-Pro: Style-Guided Prompt Learning for Generalizable Vision-Language Models.</papertitle>
+                </a>
+                <br>
+                <strong>NA Talemi, H Kashiani, F Afghah</strong>
+                <br>
+                <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2025.
+                <br>
+                <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Talemi_Style-Pro_Style-Guided_Prompt_Learning_for_Generalizable_Vision-Language_Models_WACV_2025_paper.pdf">CVF</a> /
+                <a href="https://arxiv.org/abs/2411.16018">arxiv</a> /
+                <a href="Doc/Poster_StylePro_WACV2025.pdf">Poster</a>/
+                <a href="Doc/Style-Pro">BibTeX</a>
+                <p align="justify">
+                  We propose a style-guided prompt learning framework to enhance generalization in Vision-Language models.
+                </p>
+               </td>
+             </tr>
 
 
-			  			 <!-- New Publication: MedViT -->
-			<tr onmouseout="tcd_stop_medvit()" onmouseover="tcd_start_medvit()">
-			  <td style="padding:10px;width:25%;vertical-align:top">
-				<div class="image-container">
-				  <!-- Default Image -->
-				  <img id="medvit-img" src="Doc/MedViT.png" alt="MedViT" width="200" style="border-style: none">
-				</div>
+            <tr onmouseout="tcd_stop_roads()" onmouseover="tcd_start_roads()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="paper_an" src="Doc/anomaly_1.png" alt="Image of ROADS Paper" width="200" style="border-style: none">
+                </div>
 
-				<script type="text/javascript">
-				  // Function to change the image when hovered
-				  function tcd_start_medvit() {
-					document.getElementById('medvit-img').src = "Doc/MedViT_2_edit.png";
-				  }
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start_roads() {
+                   document.getElementById('paper_an').src = "Doc/anomaly_2.jpg";
+                  }
 
-				  // Function to revert back to the original image
-				  function tcd_stop_medvit() {
-					document.getElementById('medvit-img').src = "Doc/MedViT.png";
-				  }
-				</script>
-			  </td>
+                  // Function to revert back to the original image
+                  function tcd_stop_roads() {
+                   document.getElementById('paper_an').src = "Doc/anomaly_1.png";
+                  }
+                </script>
+               </td>
 
-			  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-				<a href="https://arxiv.org/pdf/2302.09462" id="MedViT_journal">
-				  <papertitle style="color:#1772d0;">MedViT: A Robust Vision Transformer for Generalized Medical Image Classification.</papertitle>
-				</a>
-				<br>
-				<strong>ON Manzari, H Ahmadabadi, H Kashiani, SB Shokouhi, A Ayatollahi</strong>
-				<br>
-				<em>Computers in Biology and Medicine</em>, 2023.
-				<br>
-				<a href="https://arxiv.org/pdf/2302.09462">arxiv</a> /
-				<a href="https://www.sciencedirect.com/science/article/pii/S0010482523002561">Elsevier</a> /
-				<a href="Doc/medvit.bib">bibtex</a> /
-				<a href="https://github.com/Omid-Nejati/MedViT">code</a>
-				<p align="justify">
-				  This study proposes a robust and efficient CNN-Transformer hybrid model, combining CNN locality with the global connectivity of vision Transformers. Additionally, we enhance robustness by learning smoother decision boundaries through feature mean and variance permutation within mini-batches.
-				</p>
-			  </td>
-			</tr>
-                              <!-- New Publication 1 -->
-              <tr>
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2411.16049" id="ROADS_journal">
+                  <papertitle style="color:#1772d0;">ROADS: Robust Prompt-driven Multi-Class Anomaly Detection under Domain Shift.</papertitle>
+                </a>
+                <br>
+                <strong>H Kashiani, NA Talemi, F Afghah</strong>
+                <br>
+                <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2025.
+                <br>
+                <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Kashiani_ROADS_Robust_Prompt-Driven_Multi-Class_Anomaly_Detection_under_Domain_Shift_WACV_2025_paper.pdf">CVF</a> /
+                <a href="https://arxiv.org/abs/2411.16049">arxiv</a> /
+                <a href="Doc/Poster_ROADS_WACV2025.pdf">Poster</a> /
+                <a href="https://www.youtube.com/watch?v=A6tYQUHMyno">Video (Best WACV)</a> /
+                <a href="Doc/ROADS">BibTeX</a>
+
+                <p align="justify">
+                   We propose a robust multi-class anomaly detection framework with a class-aware prompt integration mechanism to mitigate inter-class interference and a domain adapter to handle domain shifts.
+                </p>
+               </td>
+             </tr>
+
+
+             <tr onmouseout="tcd_stop()" onmouseover="tcd_start()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="paper-img" src="Doc/CATFACE_1.png" alt="CATFace" width="200" style="border-style: none">
+                </div>
+
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start() {
+                   document.getElementById('paper-img').src = "Doc/CATFACE__2.png";
+                  }
+
+                  // Function to revert back to the original image
+                  function tcd_stop() {
+                   document.getElementById('paper-img').src = "Doc/CATFACE_1.png";
+                  }
+                </script>
+               </td>
+
+            <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+             <a href="https://arxiv.org/pdf/2401.03037" id="CATFace_journal">
+               <papertitle style="color:#1772d0;">CATFace: Cross-Attribute-Guided Transformer With Self-Attention Distillation for Low-Quality Face Recognition.</papertitle>
+             </a>
+             <br>
+             <strong>NA Talemi, H Kashiani, NM Nasrabadi</strong>
+             <br>
+             <em>IEEE Transactions on Biometrics, Behavior, and Identity Science</em>, 2024.
+             <br>
+             <a href="https://arxiv.org/pdf/2401.03037">arxiv</a> /
+             <a href="https://ieeexplore.ieee.org/abstract/document/10380201/">IEEE</a> /
+             <a href="Doc/catface.bib">BibTeX</a>
+             <p align="justify">
+               We propose a novel multi-branch network with cross-attribute-guided fusion and self-attention distillation, improving face recognition in low-quality images using soft biometric attributes.
+             </p>
+            </td>
+          </tr>
+
+
+                    <tr onmouseout="tcd_stop_medvit()" onmouseover="tcd_start_medvit()">
+            <td style="padding:10px;width:25%;vertical-align:top">
+             <div class="image-container">
+               <img id="medvit-img" src="Doc/MedViT.png" alt="MedViT" width="200" style="border-style: none">
+             </div>
+
+             <script type="text/javascript">
+               // Function to change the image when hovered
+               function tcd_start_medvit() {
+                document.getElementById('medvit-img').src = "Doc/MedViT_2_edit.png";
+               }
+
+               // Function to revert back to the original image
+               function tcd_stop_medvit() {
+                document.getElementById('medvit-img').src = "Doc/MedViT.png";
+               }
+             </script>
+            </td>
+
+            <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+             <a href="https://arxiv.org/pdf/2302.09462" id="MedViT_journal">
+               <papertitle style="color:#1772d0;">MedViT: A Robust Vision Transformer for Generalized Medical Image Classification.</papertitle>
+             </a>
+             <br>
+             <strong>ON Manzari, H Ahmadabadi, H Kashiani, SB Shokouhi, A Ayatollahi</strong>
+             <br>
+             <em>Computers in Biology and Medicine</em>, 2023.
+             <br>
+             <a href="https://arxiv.org/pdf/2302.09462">arxiv</a> /
+             <a href="https://www.sciencedirect.com/science/article/pii/S0010482523002561">Elsevier</a> /
+             <a href="Doc/medvit.bib">BibTeX</a> /
+             <a href="https://github.com/Omid-Nejati/MedViT">code</a>
+             <p align="justify">
+               This study proposes a robust and efficient CNN-Transformer hybrid model, combining CNN locality with the global connectivity of vision Transformers. Additionally, we enhance robustness by learning smoother decision boundaries through feature mean and variance permutation within mini-batches.
+             </p>
+            </td>
+          </tr>
+                              <tr>
                 <td style="padding:10px;width:25%;vertical-align:top">
                   <img src="Doc/AAFACE.png" alt="AAFACE" width="200" style="border-style: none">
                 </td>
@@ -407,61 +512,53 @@
                   <br>
                   <a href="https://arxiv.org/pdf/2308.07243">arxiv</a> /
                   <a href="https://ieeexplore.ieee.org/abstract/document/10222666">IEEE</a> /
-                  <a href="Doc/AAFACE.bib">bibtex</a>
-                  <!--<a href="https://github.com/kashiani/AAFACE">code</a>-->
+                  <a href="Doc/AAFACE.bib">BibTeX</a>
                   <p align="justify"> We present a multi-branch network using attribute-aware integration to enhance face recognition through soft biometric prediction.
                     </p>
                 </td>
               </tr>
 
 
-			<!-- New Publication: Morph Attack Detection -->
-			<tr onmouseout="tcd_stop_morph()" onmouseover="tcd_start_morph()">
-			  <td style="padding:10px;width:25%;vertical-align:top">
-				<div class="image-container">
-				  <!-- Default Image -->
-				  <img id="morph-img" src="Doc/MorphAttackDetection.png" alt="Morph Attack Detection" width="200" style="border-style: none">
-				</div>
+          <tr onmouseout="tcd_stop_morph()" onmouseover="tcd_start_morph()">
+            <td style="padding:10px;width:25%;vertical-align:top">
+             <div class="image-container">
+               <img id="morph-img" src="Doc/MorphAttackDetection.png" alt="Morph Attack Detection" width="200" style="border-style: none">
+             </div>
 
-				<script type="text/javascript">
-				  // Function to change the image when hovered
-				  function tcd_start_morph() {
-					document.getElementById('morph-img').src = "Doc/MorphAttackDetection_2.png";
-				  }
+             <script type="text/javascript">
+               // Function to change the image when hovered
+               function tcd_start_morph() {
+                document.getElementById('morph-img').src = "Doc/MorphAttackDetection_2.png";
+               }
 
-				  // Function to revert back to the original image
-				  function tcd_stop_morph() {
-					document.getElementById('morph-img').src = "Doc/MorphAttackDetection.png";
-				  }
-				</script>
-			  </td>
+               // Function to revert back to the original image
+               function tcd_stop_morph() {
+                document.getElementById('morph-img').src = "Doc/MorphAttackDetection.png";
+               }
+             </script>
+            </td>
 
-			  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-				<a href="https://arxiv.org/pdf/2308.10392" id="MorphDetection_journal">
-				  <papertitle style="color:#1772d0;">Towards Generalizable Morph Attack Detection with Consistency Regularization.</papertitle>
-				</a>
-				<br>
-				<strong>H Kashiani, NA Talemi, NM Nasrabadi</strong>
-				<br>
-				<em>IEEE International Joint Conference on Biometrics (IJCB)</em>, 2023.
-				<br>
-				<a href="https://arxiv.org/pdf/2308.10392">arxiv</a> /
-				<a href="https://ieeexplore.ieee.org/abstract/document/10448876/">IEEE</a> /
-				<a href="data/morph.bib">bibtex</a> /
-				<a href="Doc/Poster-IJCB2023.pdf">Poster</a> /
-				<a href="https://github.com/kashiani/SelfMorphing_GRL">code</a>
-				<p align="justify">
-				  We propose consistency regularization to enhance the generalization of morph attack detection through morph-wise augmentations to enhance robustness against unseen morph attacks in biometric systems.
-				</p>
-			  </td>
-			</tr>
+            <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+             <a href="https://arxiv.org/pdf/2308.10392" id="MorphDetection_journal">
+               <papertitle style="color:#1772d0;">Towards Generalizable Morph Attack Detection with Consistency Regularization.</papertitle>
+             </a>
+             <br>
+             <strong>H Kashiani, NA Talemi, NM Nasrabadi</strong>
+             <br>
+             <em>IEEE International Joint Conference on Biometrics (IJCB)</em>, 2023.
+             <br>
+             <a href="https://arxiv.org/pdf/2308.10392">arxiv</a> /
+             <a href="https://ieeexplore.ieee.org/abstract/document/10448876/">IEEE</a> /
+             <a href="data/morph.bib">BibTeX</a> /
+             <a href="Doc/Poster-IJCB2023.pdf">Poster</a> /
+             <a href="https://github.com/kashiani/SelfMorphing_GRL">code</a>
+             <p align="justify">
+               We propose consistency regularization to enhance the generalization of morph attack detection through morph-wise augmentations to enhance robustness against unseen morph attacks in biometric systems.
+             </p>
+            </td>
+          </tr>
 
 
-              <!-- New Publication 3 -->
-
-
-
-              <!-- New Publication 4 -->
               <tr>
                 <td style="padding:10px;width:25%;vertical-align:top">
                   <img src="Doc/FaceQualityVector.png" alt="Face Quality Vector" width="200" style="border-style: none">
@@ -477,185 +574,173 @@
                   <br>
                   <a href="https://openaccess.thecvf.com/content/WACV2023W/WVAQ/papers/Najafzadeh_Face_Image_Quality_Vector_Assessment_for_Biometrics_Applications_WACVW_2023_paper.pdf">CVF</a> /
                   <a href="https://ieeexplore.ieee.org/document/10031228">IEEE</a> /
-                  <a href="data/facequality.bib">bibtex</a>
-                  <!--<a href="https://github.com/kashiani/FaceQuality">code</a>  -->
+                  <a href="data/facequality.bib">BibTeX</a>
                   <p align="justify">This paper proposes a multi-task neural network that generates a face quality vector, including nuisance factors, offering improved performance and detailed feedback for face image quality assessment.</p>
                 </td>
               </tr>
 
 
-							  				<!-- New Publication: Robust Ensemble Morph Detection -->
-				<tr onmouseout="tcd_stop_ensemble()" onmouseover="tcd_start_ensemble()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="ensemble-img" src="Doc/RobustEnsemble_2_edit.png" alt="Robust Ensemble" width="200" style="border-style: none">
-					</div>
+                                  <tr onmouseout="tcd_stop_ensemble()" onmouseover="tcd_start_ensemble()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="ensemble-img" src="Doc/RobustEnsemble_2_edit.png" alt="Robust Ensemble" width="200" style="border-style: none">
+                </div>
 
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start_ensemble() {
-						document.getElementById('ensemble-img').src = "Doc/RobustEnsemble.png";
-					  }
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start_ensemble() {
+                   document.getElementById('ensemble-img').src = "Doc/RobustEnsemble.png";
+                  }
 
-					  // Function to revert back to the original image
-					  function tcd_stop_ensemble() {
-						document.getElementById('ensemble-img').src = "Doc/RobustEnsemble_2_edit.png";
-					  }
-					</script>
-				  </td>
+                  // Function to revert back to the original image
+                  function tcd_stop_ensemble() {
+                   document.getElementById('ensemble-img').src = "Doc/RobustEnsemble_2_edit.png";
+                  }
+                </script>
+               </td>
 
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://arxiv.org/pdf/2209.08130" id="EnsembleMorph_journal">
-					  <papertitle style="color:#1772d0;">Robust Ensemble Morph Detection with Domain Generalization.</papertitle>
-					</a>
-					<br>
-					<strong>H Kashiani, SM Sami, S Soleymani, NM Nasrabadi</strong>
-					<br>
-					<em>IEEE International Joint Conference on Biometrics (IJCB)</em>, 2022.
-					<br>
-					<a href="https://arxiv.org/pdf/2209.08130">arxiv</a> /
-					<a href="https://ieeexplore.ieee.org/abstract/document/10007929/">IEEE</a> /
-					<a href="data/morphensemble.bib">bibtex</a> /
-					<a href="Doc/Poster-IJCB2022.pdf">Poster</a> /
-					<a href="Doc/Video-IJCB2022.mp4">Video</a> /
-					<a href="https://pages.nist.gov/frvt/reports/morph/frvt_morph_report.pdf">FRVT Results</a> /
-					<a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark">code</a>
-					<p align="justify">
-					  This paper proposes a robust ensemble of CNNs and Transformers for morph detection that enhances generalization to morph attacks and increases robustness against adversarial threats through multi-perturbation training.
-					</p>
-				  </td>
-				</tr>
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/pdf/2209.08130" id="EnsembleMorph_journal">
+                  <papertitle style="color:#1772d0;">Robust Ensemble Morph Detection with Domain Generalization.</papertitle>
+                </a>
+                <br>
+                <strong>H Kashiani, SM Sami, S Soleymani, NM Nasrabadi</strong>
+                <br>
+                <em>IEEE International Joint Conference on Biometrics (IJCB)</em>, 2022.
+                <br>
+                <a href="https://arxiv.org/pdf/2209.08130">arxiv</a> /
+                <a href="https://ieeexplore.ieee.org/abstract/document/10007929/">IEEE</a> /
+                <a href="data/morphensemble.bib">BibTeX</a> /
+                <a href="Doc/Poster-IJCB2022.pdf">Poster</a> /
+                <a href="Doc/Video-IJCB2022.mp4">Video</a> /
+                <a href="https://pages.nist.gov/frvt/reports/morph/frvt_morph_report.pdf">FRVT Results</a> /
+                <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark">code</a>
+                <p align="justify">
+                  This paper proposes a robust ensemble of CNNs and Transformers for morph detection that enhances generalization to morph attacks and increases robustness against adversarial threats through multi-perturbation training.
+                </p>
+               </td>
+             </tr>
 
 
 
 
-				<!-- New Publication: Robust Transformer with Locality Inductive Bias and Feature Normalization -->
-				<tr onmouseout="tcd_stop_transformer()" onmouseover="tcd_start_transformer()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="transformer-img" src="Doc/Robust_transformer.png" alt="Robust Transformer" width="200" style="border-style: none">
-					</div>
+             <tr onmouseout="tcd_stop_transformer()" onmouseover="tcd_start_transformer()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="transformer-img" src="Doc/Robust_transformer.png" alt="Robust Transformer" width="200" style="border-style: none">
+                </div>
 
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start_transformer() {
-						document.getElementById('transformer-img').src = "Doc/Robust_transformer_2.png";
-					  }
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start_transformer() {
+                   document.getElementById('transformer-img').src = "Doc/Robust_transformer_2.png";
+                  }
 
-					  // Function to revert back to the original image
-					  function tcd_stop_transformer() {
-						document.getElementById('transformer-img').src = "Doc/Robust_transformer.png";
-					  }
-					</script>
-				  </td>
+                  // Function to revert back to the original image
+                  function tcd_stop_transformer() {
+                   document.getElementById('transformer-img').src = "Doc/Robust_transformer.png";
+                  }
+                </script>
+               </td>
 
 
 
 
 
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://arxiv.org/pdf/2301.11553" id="Transformer_journal">
-					  <papertitle style="color:#1772d0;">Robust Transformer with Locality Inductive Bias and Feature Normalization.</papertitle>
-					</a>
-					<br>
-					<strong>ON Manzari, H Kashiani, HA Dehkordi, SB Shokouhi</strong>
-					<br>
-					<em>Engineering Science and Technology</em>, 2022.
-					<br>
-					<a href="https://arxiv.org/pdf/2301.11553">arxiv</a> /
-					<a href="https://www.sciencedirect.com/science/article/pii/S2215098622002294">Elsevier</a> /
-					<a href="data/robust_transformer.bib">bibtex</a> /
-					<a href="https://github.com/Omid-Nejati/Locality-iN-Locality">code</a>
-					<p align="justify">
-					  This paper proposes a robust transformer model that incorporates locality inductive bias and feature normalization, enhancing generalization and robustness in feature extraction tasks.
-					</p>
-				  </td>
-				</tr>
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/pdf/2301.11553" id="Transformer_journal">
+                  <papertitle style="color:#1772d0;">Robust Transformer with Locality Inductive Bias and Feature Normalization.</papertitle>
+                </a>
+                <br>
+                <strong>ON Manzari, H Kashiani, HA Dehkordi, SB Shokouhi</strong>
+                <br>
+                <em>Engineering Science and Technology</em>, 2022.
+                <br>
+                <a href="https://arxiv.org/pdf/2301.11553">arxiv</a> /
+                <a href="https://www.sciencedirect.com/science/article/pii/S2215098622002294">Elsevier</a> /
+                <a href="data/robust_transformer.bib">BibTeX</a> /
+                <a href="https://github.com/Omid-Nejati/Locality-iN-Locality">code</a>
+                <p align="justify">
+                  This paper proposes a robust transformer model that incorporates locality inductive bias and feature normalization, enhancing generalization and robustness in feature extraction tasks.
+                </p>
+               </td>
+             </tr>
 
-				<!-- New Publication: Human Action Recognition -->
-				<tr onmouseout="tcd_stop_humanaction()" onmouseover="tcd_start_humanaction()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="humanaction-img" src="Doc/HumanActionRecognition.png" alt="Human Action Recognition" width="200" style="border-style: none">
-					</div>
+             <tr onmouseout="tcd_stop_humanaction()" onmouseover="tcd_start_humanaction()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="humanaction-img" src="Doc/HumanActionRecognition.png" alt="Human Action Recognition" width="200" style="border-style: none">
+                </div>
 
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start_humanaction() {
-						document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition_2.png";
-					  }
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start_humanaction() {
+                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition_2.png";
+                  }
 
-					  // Function to revert back to the original image
-					  function tcd_stop_humanaction() {
-						document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition.png";
-					  }
-					</script>
-				  </td>
+                  // Function to revert back to the original image
+                  function tcd_stop_humanaction() {
+                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition.png";
+                  }
+                </script>
+               </td>
 
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://arxiv.org/pdf/2112.07015" id="HumanAction_journal">
-					  <papertitle style="color:#1772d0;">Multi-expert Human Action Recognition with Hierarchical Super-class Learning.</papertitle>
-					</a>
-					<br>
-					<strong>HA Dehkordi, AS Nezhad, H Kashiani, SB Shokouhi, A Ayatollahi</strong>
-					<br>
-					<em>Knowledge-Based Systems</em>, 2022.
-					<br>
-					<a href="https://arxiv.org/pdf/2112.07015">arxiv</a> /
-					<a href="https://www.sciencedirect.com/science/article/pii/S0950705122005378">Elsevier</a> /
-					<a href="data/humanaction.bib">bibtex</a>
-					<!--<a href="https://github.com/kashiani/HumanActionRecognition">code</a>-->
-					<p align="justify">
-					  We propose a two-phase multi-expert classification method for human action recognition, addressing long-tailed distribution using super-class learning without extra data or manual annotation. A novel Graph-Based Class Selection (GCS) algorithm optimizes class configurations and inter-class dependencies.
-					</p>
-				  </td>
-				</tr>
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/pdf/2112.07015" id="HumanAction_journal">
+                  <papertitle style="color:#1772d0;">Multi-expert Human Action Recognition with Hierarchical Super-class Learning.</papertitle>
+                </a>
+                <br>
+                <strong>HA Dehkordi, AS Nezhad, H Kashiani, SB Shokouhi, A Ayatollahi</strong>
+                <br>
+                <em>Knowledge-Based Systems</em>, 2022.
+                <br>
+                <a href="https://arxiv.org/pdf/2112.07015">arxiv</a> /
+                <a href="https://www.sciencedirect.com/science/article/pii/S0950705122005378">Elsevier</a> /
+                <a href="data/humanaction.bib">BibTeX</a>
+                <p align="justify">
+                  We propose a two-phase multi-expert classification method for human action recognition, addressing long-tailed distribution using super-class learning without extra data or manual annotation. A novel Graph-Based Class Selection (GCS) algorithm optimizes class configurations and inter-class dependencies.
+                </p>
+               </td>
+             </tr>
 
 
-				<!-- New Publication: Generalizing Object Detectors for Autonomous Vehicles -->
-				<tr onmouseout="tcd_stop_generalizing()" onmouseover="tcd_start_generalizing()">
-				  <td style="padding:10px;width:25%;vertical-align:top">
-					<div class="image-container">
-					  <!-- Default Image -->
-					  <img id="generalizing-img" src="Doc/Generalizing_1.png" alt="Autonomous Vehicles" width="200" style="border-style: none">
-					</div>
+             <tr onmouseout="tcd_stop_generalizing()" onmouseover="tcd_start_generalizing()">
+               <td style="padding:10px;width:25%;vertical-align:top">
+                <div class="image-container">
+                  <img id="generalizing-img" src="Doc/Generalizing_1.png" alt="Autonomous Vehicles" width="200" style="border-style: none">
+                </div>
 
-					<script type="text/javascript">
-					  // Function to change the image when hovered
-					  function tcd_start_generalizing() {
-						document.getElementById('generalizing-img').src = "Doc/Generalizing_2.png";
-					  }
+                <script type="text/javascript">
+                  // Function to change the image when hovered
+                  function tcd_start_generalizing() {
+                   document.getElementById('generalizing-img').src = "Doc/Generalizing_2.png";
+                  }
 
-					  // Function to revert back to the original image
-					  function tcd_stop_generalizing() {
-						document.getElementById('generalizing-img').src = "Doc/Generalizing_1.png";
-					  }
-					</script>
-				  </td>
+                  // Function to revert back to the original image
+                  function tcd_stop_generalizing() {
+                   document.getElementById('generalizing-img').src = "Doc/Generalizing_1.png";
+                  }
+                </script>
+               </td>
 
-				  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-					<a href="https://www.sciencedirect.com/science/article/pii/S0957417421008368" id="AutonomousVehicles_journal">
-					  <papertitle style="color:#1772d0;">Generalizing State-of-the-art Object Detectors for Autonomous Vehicles in Unseen Environments.</papertitle>
-					</a>
-					<br>
-					<strong>A Khosravian, A Amirkhani, H Kashiani, M Masih-Tehrani</strong>
-					<br>
-					<em>Expert Systems with Applications</em>, 2021.
-					<br>
-					<a href="https://www.sciencedirect.com/science/article/pii/S0957417421008368">Elsevier</a> /
-					<a href="data/autonomous.bib">bibtex</a>
-					<!--<a href="https://github.com/kashiani/AutonomousVehicles">code</a>-->
-					<p align="justify">
-					  We address the generalization issues in scene understanding for autonomous vehicles by employing GANs for weather modeling, and advanced augmentations, improving object detection robustness and generalization across domains, especially in adverse weather conditions and natural distortions.
-					</p>
-				  </td>
-				</tr>
+               <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0957417421008368" id="AutonomousVehicles_journal">
+                  <papertitle style="color:#1772d0;">Generalizing State-of-the-art Object Detectors for Autonomous Vehicles in Unseen Environments.</papertitle>
+                </a>
+                <br>
+                <strong>A Khosravian, A Amirkhani, H Kashiani, M Masih-Tehrani</strong>
+                <br>
+                <em>Expert Systems with Applications</em>, 2021.
+                <br>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0957417421008368">Elsevier</a> /
+                <a href="data/autonomous.bib">BibTeX</a>
+                <p align="justify">
+                  We address the generalization issues in scene understanding for autonomous vehicles by employing GANs for weather modeling, and advanced augmentations, improving object detection robustness and generalization across domains, especially in adverse weather conditions and natural distortions.
+                </p>
+               </td>
+             </tr>
 
 
-              <!-- New Publication 8 -->
               <tr>
                 <td style="padding:10px;width:25%;vertical-align:top">
                   <img src="Doc/COVIDDetection.png" alt="COVID Detection" width="200" style="border-style: none">
@@ -671,14 +756,12 @@
                   <br>
                   <a href="https://www.researchgate.net/profile/Hojat-Asgarian-Dehkordi/publication/358999207_Lightweight_Local_Transformer_for_COVID-19_Detection_Using_Chest_CT_Scans/links/624fe178d726197cfd45233b/Lightweight-Local-Transformer-for-COVID-19-Detection-Using-Chest-CT-Scans.pdf">arxiv</a> /
                   <a href="https://ieeexplore.ieee.org/abstract/document/9721517/">IEEE</a> /
-                  <a href="data/covid.bib">bibtex</a>/
-					<a href="https://www.youtube.com/watch?v=1Xv-gX8jiRU">Video</a>
-                  <!--<a href="https://github.com/kashiani/COVIDDetection">code</a>-->
+                  <a href="data/covid.bib">BibTeX</a>/
+                <a href="https://www.youtube.com/watch?v=1Xv-gX8jiRU">Video</a>
                   <p align="justify">This paper introduces a hybrid CNN-Transformer model for COVID-19 diagnosis using CT images, combining local and global feature extraction, and achieving superior performance with limited training data.</p>
                 </td>
               </tr>
 
-              <!-- New Publication 9 -->
               <tr>
                 <td style="padding:10px;width:25%;vertical-align:top">
                   <img src="Doc/SemanticSegmentation.png" alt="Semantic Segmentation" width="200" style="border-style: none">
@@ -693,139 +776,128 @@
                   <em>IEEE Access</em>, 2021.
                   <br>
                   <a href="https://ieeexplore.ieee.org/iel7/6287639/9312710/09522137.pdf">IEEE</a> /
-                  <a href="data/semanticseg.bib">bibtex</a>
-                  <!--<a href="https://github.com/kashiani/SemanticSegmentation">code</a>-->
+                  <a href="data/semanticseg.bib">BibTeX</a>
                   <p align="justify">We propose a multi-teacher KD framework in which several expert CNNs, trained on different settings, supervise a lightweight student model. This framework enhances the robustness and performance of the student by using diverse knowledge sources.</p>
                 </td>
               </tr>
 
-			<!-- New Publication: Visual Object Tracking -->
-			<tr onmouseout="imavis_stop()" onmouseover="imavis_start()">
-			  <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
-				<div class="one" style="position: relative; width: 200px; height: auto;">
-				  <!-- Video container that will display on hover, initially hidden -->
-				  <div class="two" id="imavis_video" style="position: absolute; top; left: 0; visibility: hidden; width: 200px; height: auto;">
-					<video width="200" style="border-style: none" muted autoplay loop>
-					  <source src="Doc/IMAVIS_2.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-				  </div>
-				  <!-- Default Image -->
-				  <img src="Doc/IMAVIS_1.png" alt="Visual Object Tracking" width="200" style="border-style: none">
-				</div>
+          <tr onmouseout="imavis_stop()" onmouseover="imavis_start()">
+            <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
+             <div class="one" style="position: relative; width: 200px; height: auto;">
+               <div class="two" id="imavis_video" style="position: absolute; top; left: 0; visibility: hidden; width: 200px; height: auto;">
+                <video width="200" style="border-style: none" muted autoplay loop>
+                  <source src="Doc/IMAVIS_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+               </div>
+               <img src="Doc/IMAVIS_1.png" alt="Visual Object Tracking" width="200" style="border-style: none">
+             </div>
 
-				<script type="text/javascript">
-				  function imavis_start() {
-					document.getElementById('imavis_video').style.visibility = "visible";
-				  }
+             <script type="text/javascript">
+               function imavis_start() {
+                document.getElementById('imavis_video').style.visibility = "visible";
+               }
 
-				  function imavis_stop() {
-					document.getElementById('imavis_video').style.visibility = "hidden";
-				  }
+               function imavis_stop() {
+                document.getElementById('imavis_video').style.visibility = "hidden";
+               }
 
-				  // Initialize with the video hidden
-				  imavis_stop();
-				</script>
-			  </td>
+               // Initialize with the video hidden
+               imavis_stop();
+             </script>
+            </td>
 
-			  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-				<a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113" id="Tracking_journal">
-				  <papertitle style="color:#1772d0;">Visual Object Tracking Based on Adaptive Siamese and Motion Estimation Network.</papertitle>
-				</a>
-				<br>
-				<strong>Hossein Kashiani, Shahriar B Shokouhi</strong>
-				<br>
-				<em>Image and Vision Computing</em>, 2019.
-				<br>
-				<a href="https://arxiv.org/pdf/1810.00119">arxiv</a> /
-				<a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113">Elsevier</a> /
-				<a href="data/tracking.bib">bibtex</a>
-				<!--<a href="https://github.com/kashiani/Tracking">code</a>-->
-				<p align="justify">
-				  This work aims to improve motion and observation models in visual object tracking. We propose a motion estimation network to refine target location predictions, with a Siamese network detecting the most probable candidate. Additionally, a weighting CNN adaptively assigns weights to similarity scores, accounting for target appearance changes.
-				</p>
-			  </td>
-			</tr>
+            <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+             <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113" id="Tracking_journal">
+               <papertitle style="color:#1772d0;">Visual Object Tracking Based on Adaptive Siamese and Motion Estimation Network.</papertitle>
+             </a>
+             <br>
+             <strong>Hossein Kashiani, Shahriar B Shokouhi</strong>
+             <br>
+             <em>Image and Vision Computing</em>, 2019.
+             <br>
+             <a href="https://arxiv.org/pdf/1810.00119">arxiv</a> /
+             <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113">Elsevier</a> /
+             <a href="data/tracking.bib">BibTeX</a>
+             <p align="justify">
+               This work aims to improve motion and observation models in visual object tracking. We propose a motion estimation network to refine target location predictions, with a Siamese network detecting the most probable candidate. Additionally, a weighting CNN adaptively assigns weights to similarity scores, accounting for target appearance changes.
+             </p>
+            </td>
+          </tr>
 
 
 
 
 
-			<!-- Previous Publication 2 -->
-			<tr onmouseout="iccke_stop()" onmouseover="iccke_start()">
-			  <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
-				<div class="one" style="position: relative; width: 200px; height: auto;">
-				  <!-- GIF container that will display on hover, initially hidden -->
-				  <div class="two" id="iccke_gif" style="position: absolute; top: 0; left: 0; visibility: hidden; width: 200px; height: auto;">
-					<img src="Doc/ICCKE_2.gif" alt="Patchwise Object Tracking GIF" width="200" style="border-style: none">
-				  </div>
-				  <!-- Default Image -->
-				  <img src="Doc/ICCKE_1.png" alt="Patchwise Object Tracking" width="200" style="border-style: none">
-				</div>
+          <tr onmouseout="iccke_stop()" onmouseover="iccke_start()">
+            <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
+             <div class="one" style="position: relative; width: 200px; height: auto;">
+               <div class="two" id="iccke_gif" style="position: absolute; top: 0; left: 0; visibility: hidden; width: 200px; height: auto;">
+                <img src="Doc/ICCKE_2.gif" alt="Patchwise Object Tracking GIF" width="200" style="border-style: none">
+               </div>
+               <img src="Doc/ICCKE_1.png" alt="Patchwise Object Tracking" width="200" style="border-style: none">
+             </div>
 
-				<script type="text/javascript">
-				  function iccke_start() {
-					document.getElementById('iccke_gif').style.visibility = "visible";
-				  }
+             <script type="text/javascript">
+               function iccke_start() {
+                document.getElementById('iccke_gif').style.visibility = "visible";
+               }
 
-				  function iccke_stop() {
-					document.getElementById('iccke_gif').style.visibility = "hidden";
-				  }
+               function iccke_stop() {
+                document.getElementById('iccke_gif').style.visibility = "hidden";
+               }
 
-				  // Initialize with the GIF hidden
-				  iccke_stop();
-				</script>
-			  </td>
+               // Initialize with the GIF hidden
+               iccke_stop();
+             </script>
+            </td>
 
-			  <td style="padding-bottom:35px;width:75%;vertical-align:middle">
-				<a href="https://ieeexplore.ieee.org/document/8167940" id="PatchwiseTracking_journal">
-				  <papertitle style="color:#1772d0;">Patchwise Object Tracking via Structural Local Sparse Appearance Model.</papertitle>
-				</a>
-				<br>
-				<strong>Hossein Kashiani, Shahriar B Shokouhi</strong>
-				<br>
-				<em>International Conference on Computer and Knowledge Engineering</em>, 2017.
-				<br>
-				<a href="https://arxiv.org/pdf/1803.06141">arxiv</a> /
-				<a href="https://ieeexplore.ieee.org/document/8167940">IEEE</a> /
-				<a href="data/patchwise.bib">bibtex</a>
-				<!--<a href="https://github.com/kashiani/PatchwiseTracking">code</a>-->
-				<p align="justify">This paper proposes a robust tracking method that exploits relationships between target patches in adjacent frames using a sparse appearance model.</p>
-			  </td>
-			</tr>
+            <td style="padding-bottom:35px;width:75%;vertical-align:middle">
+             <a href="https://ieeexplore.ieee.org/document/8167940" id="PatchwiseTracking_journal">
+               <papertitle style="color:#1772d0;">Patchwise Object Tracking via Structural Local Sparse Appearance Model.</papertitle>
+             </a>
+             <br>
+             <strong>Hossein Kashiani, Shahriar B Shokouhi</strong>
+             <br>
+             <em>International Conference on Computer and Knowledge Engineering</em>, 2017.
+             <br>
+             <a href="https://arxiv.org/pdf/1803.06141">arxiv</a> /
+             <a href="https://ieeexplore.ieee.org/document/8167940">IEEE</a> /
+             <a href="data/patchwise.bib">BibTeX</a>
+             <p align="justify">This paper proposes a robust tracking method that exploits relationships between target patches in adjacent frames using a sparse appearance model.</p>
+            </td>
+          </tr>
 
 
 
               </tbody>
             </table>
-          </div> <!-- End of #publications div -->
-
-		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-		  <tbody>
-			<tr>
-			  <td style="padding:20px;width:100%;vertical-align:middle">
-				<heading>Academic Service</heading>
-				<ul>
-				  <li><b>Reviewer</b>: Prestigious academic venues in computer vision, machine learning, and artificial intelligence, including:</li>
-				  <ul>
-				  	<li><a href="https://aaai.org/conference/aaai/aaai-25/" target="_blank">AAAI Conference on Artificial Intelligence (AAAI) 2025</a>.</li>
-					<li><a href="https://cvpr.thecvf.com/" target="_blank">IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024</a>.</li>
-					<li><a href="https://2024.ieeeicme.org/" target="_blank">International Conference on Multimedia and Expo (ICME) (2022, 2023, 2024)</a>.</li>
-					<li><a href="https://2022.ieeeicip.org/" target="_blank">International Conference on Image Processing (ICIP) (2021, 2022)</a>.</li>
-					<li><a href="https://ieeeaccess.ieee.org/" target="_blank">IEEE Access</a>.</li>
-					<li><a href="https://ieee-cas.org/publication/tcsvt" target="_blank">Transactions on Circuits and Systems for Video Technology (TCSVT)</a>, IEEE.</li>
-					<li><a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank">Neurocomputing</a>, Elsevier.</li>
-					<li><a href="https://www.sciencedirect.com/journal/pattern-recognition" target="_blank">Pattern Recognition</a>, Elsevier.</li>
-					<li><a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank">Engineering Applications of Artificial Intelligence</a>, Elsevier.</li>
-					<li><a href="https://www.sciencedirect.com/journal/computers-in-biology-and-medicine" target="_blank">Computers in Biology and Medicine</a>, Elsevier.</li>
-					<li><a href="https://www.sciencedirect.com/journal/engineering-science-and-technology-an-international-journal" target="_blank">International Journal of Engineering Science and Technology</a>, Elsevier.</li>
-				  </ul>
-				  <li>Review records available at <a href="https://www.webofscience.com/wos/author/record/ABF-6491-2020" target="_blank">Web of Science</a>.</li>
-				</ul>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
+          </div> <table id="academic-service" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+         <tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+             <heading>Academic Service</heading>
+             <ul>
+               <li><b>Reviewer</b>: Prestigious academic venues in computer vision, machine learning, and artificial intelligence, including:</li>
+               <ul>
+                <li><a href="https://aaai.org/conference/aaai/aaai-25/" target="_blank">AAAI Conference on Artificial Intelligence (AAAI) 2025</a>.</li>
+                <li><a href="https://cvpr.thecvf.com/" target="_blank">IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024</a>.</li>
+                <li><a href="https://2024.ieeeicme.org/" target="_blank">International Conference on Multimedia and Expo (ICME) (2022, 2023, 2024)</a>.</li>
+                <li><a href="https://2022.ieeeicip.org/" target="_blank">International Conference on Image Processing (ICIP) (2021, 2022)</a>.</li>
+                <li><a href="https://ieeeaccess.ieee.org/" target="_blank">IEEE Access</a>.</li>
+                <li><a href="https://ieee-cas.org/publication/tcsvt" target="_blank">Transactions on Circuits and Systems for Video Technology (TCSVT)</a>, IEEE.</li>
+                <li><a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank">Neurocomputing</a>, Elsevier.</li>
+                <li><a href="https://www.sciencedirect.com/journal/pattern-recognition" target="_blank">Pattern Recognition</a>, Elsevier.</li>
+                <li><a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank">Engineering Applications of Artificial Intelligence</a>, Elsevier.</li>
+                <li><a href="https://www.sciencedirect.com/journal/computers-in-biology-and-medicine" target="_blank">Computers in Biology and Medicine</a>, Elsevier.</li>
+                <li><a href="https://www.sciencedirect.com/journal/engineering-science-and-technology-an-international-journal" target="_blank">International Journal of Engineering Science and Technology</a>, Elsevier.</li>
+               </ul>
+               <li>Review records available at <a href="https.webofscience.com/wos/author/record/ABF-6491-2020" target="_blank">Web of Science</a>.</li>
+             </ul>
+            </td>
+          </tr>
+         </tbody>
+       </table>
       </tr>
         </td>
 
@@ -837,10 +909,8 @@
     </tbody>
   </table>
 
-<!-- Include particles.js -->
 <script src="particles.js"></script>
 
-<!-- Particle configuration with custom repulsion -->
 <script>
 /* global particlesJS */
 
@@ -1013,17 +1083,16 @@ var colors = {
       });
     });
 
-    // Function to hide particles and reveal publications when scrolled
-
-
-	window.onscroll = function() {
-  let scrollY = window.scrollY || document.documentElement.scrollTop;
-  if (scrollY > 1) {
-    document.getElementById('particles-js').style.display = 'none';
-    document.getElementById('publications').classList.add('show');
-  }
-};
-
+    window.onscroll = function() {
+       let scrollY = window.scrollY || document.documentElement.scrollTop;
+       if (scrollY > 1) {
+        // Also hide the new fade div on scroll
+        var particlesJsDiv = document.getElementById('particles-js');
+        var centerFadeDiv = document.getElementById('center-fade');
+        if (particlesJsDiv) particlesJsDiv.style.display = 'none';
+        if (centerFadeDiv) centerFadeDiv.style.display = 'none';
+       }
+    };
   </script>
 </body>
 </html>
