@@ -197,7 +197,8 @@
                 <td style="padding:0px;width:100%;vertical-align:middle">
                   <heading>News</heading>
                   <div class="news">
-                    <ul style="text-align:justify;height: 150px;">
+                    <ul style="text-align:justify;height: 150px;overflow-y: auto;">
+          <li class="font">[2026/01] One paper on VLM-based anomaly detection has been accepted to ICASSP 2026.</li>
           <li class="font">[2025/05] One paper on Vision-Language Models has been accepted at KDD 2025.</li>
           <li class="font">[2025/02] FreqDebias has been accepted at CVPR 2025. </li>
           <li class="font">[2024/11] Two papers have been accepted at WACV 2025. </li>
@@ -1058,7 +1059,7 @@ var particleSettings = {
     },
     "move": {
       "enable": true,
-      "speed": 2, // From your config
+      "speed": 5, // Increased from 2
       "direction": "none",
       "random": false,
       "straight": false,
@@ -1075,12 +1076,12 @@ var particleSettings = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false, // From your config
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
         "enable": true,
-        "mode": "push" // Will be overridden by custom repulsion
+        "mode": "push"
       },
       "resize": true
     },
@@ -1099,7 +1100,7 @@ var particleSettings = {
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 100,
         "duration": 0.4
       },
       "push": {
@@ -1124,44 +1125,6 @@ var colors = {
 
     // Initialize particles with the settings
     particlesJS("particles-js", particleSettings);
-
-    // Custom function to repulse particles from the cursor
-    function repulseParticlesFromCursor() {
-      const pJS = window.pJSDom[0].pJS;
-
-      document.addEventListener('mousemove', function(e) {
-        const canvas = pJS.canvas.el;
-        const rect = canvas.getBoundingClientRect();
-        const mouseX = (e.clientX - rect.left) * pJS.canvas.pxratio;
-        const mouseY = (e.clientY - rect.top) * pJS.canvas.pxratio;
-
-        pJS.particles.array.forEach(particle => {
-          const dx = mouseX - particle.x;
-          const dy = mouseY - particle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          const maxDistance = 400;
-
-          if (distance < maxDistance) {
-            const force = (maxDistance - distance) / maxDistance;
-            const speed = 0.05;
-            particle.vx = -dx * force * speed; // Negated for repulsion
-            particle.vy = -dy * force * speed; // Negated for repulsion
-            const maxSpeed = 1.05;
-            particle.vx = Math.max(Math.min(particle.vx, maxSpeed), -maxSpeed);
-            particle.vy = Math.max(Math.min(particle.vy, maxSpeed), -maxSpeed);
-          }
-        });
-      });
-
-      document.addEventListener('mouseleave', function() {
-        pJS.particles.array.forEach(particle => {
-          particle.vx = particle.vx_i;
-          particle.vy = particle.vy_i;
-        });
-      });
-    }
-
-    repulseParticlesFromCursor();
 
     // Update link colors to match particle color
     document.addEventListener("DOMContentLoaded", function() {
