@@ -220,10 +220,14 @@
   <tbody>
     <tr>
       <td style="padding:0px;width:100%;vertical-align:middle; text-align: center;">
-        <heading>Research</heading>
+        <heading style="text-align: left; display: block;">Research</heading>
           <p style="text-align: justify;">
           My current research focuses on advancing Multimodal Large Language Models to enhance the robustness and adaptability of anomaly detection in few-shot settings and provide detailed descriptions of each detected irregularity. My prior work at CU includes developing advanced prompting techniques for Vision-Language models and robust multi-class anomaly detection.
           </p>
+          <div style="text-align: center; margin: 15px 0;">
+            <a href="#" onclick="toggleResearchDetails(); return false;" style="color: #1772d0; text-decoration: none; border: 1px solid #1772d0; padding: 6px 16px; border-radius: 4px; display: inline-block; font-size: 14px;">Read More ↓</a>
+          </div>
+          <div id="research_details" style="display:none;">
           <p style="text-align: justify;">
           At WVU, in collaboration with CITER and NIST, I explored advanced security measures for automated face recognition systems, focusing on robust <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark" target="_blank">detection </a> and <a href="https://github.com/kashiani/Morph-Attack-Synthesis" target="_blank">generation </a> of face morphing attacks. Additionally, I worked on multimodal biometric recognition under long-range constraints to address issues related to turbulent, low-quality imagery from extended distances.
           </p>
@@ -233,6 +237,7 @@
           <p style="text-align: justify;">
           Beyond these areas, my research extends to visual perception and scene understanding, such as object <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113" target="_blank">tracking</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417421008368" target="_blank">detection</a>, and <a href="https://ieeexplore.ieee.org/iel7/6287639/9312710/09522137.pdf" target="_blank">segmentation</a>. This includes enhancing the robustness, generalization, and adaptability of perception models such as object detection and semantic segmentation for autonomous vehicles; developing multi-teacher knowledge distillation framework to enhance the performance of lightweight perception models, ensuring they operate effectively in challenging environments.
           </p>
+          </div>
         <div id="scholar-metrics" style="background-color: #f0f0f0; border-radius: 10px; padding: 10px; margin: auto; display: inline-block;">
           <span style="color: #1772d0;">Citations: <span id="citation-count" style="color: #1772d0;">0</span> | H-Index: <span id="h-index" style="color: #1772d0;">0</span> | i10-Index: <span id="i10-index" style="color: #1772d0;">0</span></span>
         </div>
@@ -283,7 +288,7 @@
               </tbody>
             </table>
 
-            <table style="width:120%">
+            <table style="width:100%">
               <tbody>
 
 			<tr onmouseout="tcd_stop_promptmad()" onmouseover="tcd_start_promptmad()">
@@ -313,8 +318,9 @@
 					<br>
 					<em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</em>, 2026.
 					<br>
-					<a href="#">arxiv (coming soon)</a>
-					<p align="justify">
+					<a href="#">arxiv (coming soon)</a> /
+					<a href="#" onclick="toggleSummary('promptmad'); return false;">Summary</a>
+					<p id="promptmad_summary" align="justify" style="display:none;">
 						We propose PromptMAD, a cross-modal prompting framework for multi-class visual anomaly localization that leverages vision-language models to improve anomaly detection and localization across multiple classes.
 					</p>
 				</td>
@@ -338,8 +344,9 @@
 					<a href="https://openaccess.thecvf.com/content/CVPR2025/supplemental/Kashiani_FreqDebias_Towards_Generalizable_CVPR_2025_supplemental.pdf">Suppl</a> /
 					<a href="https://www.youtube.com/watch?v=SHThZg1zcac">Video</a> /
 					<a href="https://cvpr.thecvf.com/virtual/2025/poster/33990">Poster</a> /
-					<a href=Doc/FreqDebias.bib">BibTeX</a>
-					<p align="justify">
+					<a href=Doc/FreqDebias.bib">BibTeX</a> /
+					<a href="#" onclick="toggleSummary('freqdebias'); return false;">Summary</a>
+					<p id="freqdebias_summary" align="justify" style="display:none;">
 						We introduce a novel frequency-domain debiasing framework that uses consistency regularization to improve the generalization of deepfake detectors to unseen manipulations.
 					</p>
 				</td>
@@ -372,8 +379,9 @@
 					<em>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</em>, 2025.
 					<br>
 					<a href="https://dl.acm.org/doi/10.1145/3711896.3736911">ACM</a> /
-					<a href="https://arxiv.org/abs/2505.19373">arxiv</a>
-					<p align="justify">
+					<a href="https://arxiv.org/abs/2505.19373">arxiv</a> /
+					<a href="#" onclick="toggleSummary('disa'); return false;">Summary</a>
+					<p id="disa_summary" align="justify" style="display:none;">
 					  We propose DiSa, a directional saliency-aware prompt learning framework that improves generalization in vision-language models by integrating cross-interactive regularization and directional regularization strategies.
 					</p>
 				</td>
@@ -408,9 +416,10 @@
                 <br>
                 <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Talemi_Style-Pro_Style-Guided_Prompt_Learning_for_Generalizable_Vision-Language_Models_WACV_2025_paper.pdf">CVF</a> /
                 <a href="https://arxiv.org/abs/2411.16018">arxiv</a> /
-                <a href="Doc/Poster_StylePro_WACV2025.pdf">Poster</a>/
-                <a href="Doc/Style-Pro">BibTeX</a>
-                <p align="justify">
+                <a href="Doc/Poster_StylePro_WACV2025.pdf">Poster</a> /
+                <a href="Doc/Style-Pro">BibTeX</a> /
+                <a href="#" onclick="toggleSummary('stylepro'); return false;">Summary</a>
+                <p id="stylepro_summary" align="justify" style="display:none;">
                   We propose a style-guided prompt learning framework to enhance generalization in Vision-Language models.
                 </p>
                </td>
@@ -449,9 +458,9 @@
                 <a href="https://arxiv.org/abs/2411.16049">arxiv</a> /
                 <a href="Doc/Poster_ROADS_WACV2025.pdf">Poster</a> /
                 <a href="https://www.youtube.com/watch?v=A6tYQUHMyno">Video (Best WACV)</a> /
-                <a href="Doc/ROADS">BibTeX</a>
-
-                <p align="justify">
+                <a href="Doc/ROADS">BibTeX</a> /
+                <a href="#" onclick="toggleSummary('roads'); return false;">Summary</a>
+                <p id="roads_summary" align="justify" style="display:none;">
                    We propose a robust multi-class anomaly detection framework with a class-aware prompt integration mechanism to mitigate inter-class interference and a domain adapter to handle domain shifts.
                 </p>
                </td>
@@ -488,8 +497,9 @@
              <br>
              <a href="https://arxiv.org/pdf/2401.03037">arxiv</a> /
              <a href="https://ieeexplore.ieee.org/abstract/document/10380201/">IEEE</a> /
-             <a href="Doc/catface.bib">BibTeX</a>
-             <p align="justify">
+             <a href="Doc/catface.bib">BibTeX</a> /
+             <a href="#" onclick="toggleSummary('catface'); return false;">Summary</a>
+             <p id="catface_summary" align="justify" style="display:none;">
                We propose a novel multi-branch network with cross-attribute-guided fusion and self-attention distillation, improving face recognition in low-quality images using soft biometric attributes.
              </p>
             </td>
@@ -527,8 +537,9 @@
              <a href="https://arxiv.org/pdf/2302.09462">arxiv</a> /
              <a href="https://www.sciencedirect.com/science/article/pii/S0010482523002561">Elsevier</a> /
              <a href="Doc/medvit.bib">BibTeX</a> /
-             <a href="https://github.com/Omid-Nejati/MedViT">code</a>
-             <p align="justify">
+             <a href="https://github.com/Omid-Nejati/MedViT">code</a> /
+             <a href="#" onclick="toggleSummary('medvit'); return false;">Summary</a>
+             <p id="medvit_summary" align="justify" style="display:none;">
                This study proposes a robust and efficient CNN-Transformer hybrid model, combining CNN locality with the global connectivity of vision Transformers. Additionally, we enhance robustness by learning smoother decision boundaries through feature mean and variance permutation within mini-batches.
              </p>
             </td>
@@ -548,8 +559,9 @@
                   <br>
                   <a href="https://arxiv.org/pdf/2308.07243">arxiv</a> /
                   <a href="https://ieeexplore.ieee.org/abstract/document/10222666">IEEE</a> /
-                  <a href="Doc/AAFACE.bib">BibTeX</a>
-                  <p align="justify"> We present a multi-branch network using attribute-aware integration to enhance face recognition through soft biometric prediction.
+                  <a href="Doc/AAFACE.bib">BibTeX</a> /
+                  <a href="#" onclick="toggleSummary('aaface'); return false;">Summary</a>
+                  <p id="aaface_summary" align="justify" style="display:none;">We present a multi-branch network using attribute-aware integration to enhance face recognition through soft biometric prediction.
                     </p>
                 </td>
               </tr>
@@ -587,8 +599,9 @@
              <a href="https://ieeexplore.ieee.org/abstract/document/10448876/">IEEE</a> /
              <a href="data/morph.bib">BibTeX</a> /
              <a href="Doc/Poster-IJCB2023.pdf">Poster</a> /
-             <a href="https://github.com/kashiani/SelfMorphing_GRL">code</a>
-             <p align="justify">
+             <a href="https://github.com/kashiani/SelfMorphing_GRL">code</a> /
+             <a href="#" onclick="toggleSummary('morphdetection'); return false;">Summary</a>
+             <p id="morphdetection_summary" align="justify" style="display:none;">
                We propose consistency regularization to enhance the generalization of morph attack detection through morph-wise augmentations to enhance robustness against unseen morph attacks in biometric systems.
              </p>
             </td>
@@ -610,8 +623,9 @@
                   <br>
                   <a href="https://openaccess.thecvf.com/content/WACV2023W/WVAQ/papers/Najafzadeh_Face_Image_Quality_Vector_Assessment_for_Biometrics_Applications_WACVW_2023_paper.pdf">CVF</a> /
                   <a href="https://ieeexplore.ieee.org/document/10031228">IEEE</a> /
-                  <a href="data/facequality.bib">BibTeX</a>
-                  <p align="justify">This paper proposes a multi-task neural network that generates a face quality vector, including nuisance factors, offering improved performance and detailed feedback for face image quality assessment.</p>
+                  <a href="data/facequality.bib">BibTeX</a> /
+                  <a href="#" onclick="toggleSummary('facequality'); return false;">Summary</a>
+                  <p id="facequality_summary" align="justify" style="display:none;">This paper proposes a multi-task neural network that generates a face quality vector, including nuisance factors, offering improved performance and detailed feedback for face image quality assessment.</p>
                 </td>
               </tr>
 
@@ -650,31 +664,29 @@
                 <a href="Doc/Poster-IJCB2022.pdf">Poster</a> /
                 <a href="Doc/Video-IJCB2022.mp4">Video</a> /
                 <a href="https://pages.nist.gov/frvt/reports/morph/frvt_morph_report.pdf">FRVT Results</a> /
-                <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark">code</a>
-                <p align="justify">
+                <a href="https://github.com/kashiani/Face-Morphing-Attack-Detection-Benchmark">code</a> /
+                <a href="#" onclick="toggleSummary('morphensemble'); return false;">Summary</a>
+                <p id="morphensemble_summary" align="justify" style="display:none;">
                   This paper proposes a robust ensemble of CNNs and Transformers for morph detection that enhances generalization to morph attacks and increases robustness against adversarial threats through multi-perturbation training.
                 </p>
                </td>
              </tr>
 
-
-
-
              <tr onmouseout="tcd_stop_transformer()" onmouseover="tcd_start_transformer()">
                <td style="padding:10px;width:25%;vertical-align:top">
                 <div class="image-container">
-                  <img id="transformer-img" src="Doc/Robust_transformer.png" alt="Robust Transformer" width="200" style="border-style: none">
+                  <img id="transformer-img" src="Doc/Robust_transformer_2.png" alt="Robust Transformer" width="200" style="border-style: none">
                 </div>
 
                 <script type="text/javascript">
                   // Function to change the image when hovered
                   function tcd_start_transformer() {
-                   document.getElementById('transformer-img').src = "Doc/Robust_transformer_2.png";
+                   document.getElementById('transformer-img').src = "Doc/Robust_transformer.png";
                   }
 
                   // Function to revert back to the original image
                   function tcd_stop_transformer() {
-                   document.getElementById('transformer-img').src = "Doc/Robust_transformer.png";
+                   document.getElementById('transformer-img').src = "Doc/Robust_transformer_2.png";
                   }
                 </script>
                </td>
@@ -695,8 +707,9 @@
                 <a href="https://arxiv.org/pdf/2301.11553">arxiv</a> /
                 <a href="https://www.sciencedirect.com/science/article/pii/S2215098622002294">Elsevier</a> /
                 <a href="data/robust_transformer.bib">BibTeX</a> /
-                <a href="https://github.com/Omid-Nejati/Locality-iN-Locality">code</a>
-                <p align="justify">
+                <a href="https://github.com/Omid-Nejati/Locality-iN-Locality">code</a> /
+                <a href="#" onclick="toggleSummary('robusttransformer'); return false;">Summary</a>
+                <p id="robusttransformer_summary" align="justify" style="display:none;">
                   This paper proposes a robust transformer model that incorporates locality inductive bias and feature normalization, enhancing generalization and robustness in feature extraction tasks.
                 </p>
                </td>
@@ -705,18 +718,18 @@
              <tr onmouseout="tcd_stop_humanaction()" onmouseover="tcd_start_humanaction()">
                <td style="padding:10px;width:25%;vertical-align:top">
                 <div class="image-container">
-                  <img id="humanaction-img" src="Doc/HumanActionRecognition.png" alt="Human Action Recognition" width="200" style="border-style: none">
+                  <img id="humanaction-img" src="Doc/HumanActionRecognition_2.png" alt="Human Action Recognition" width="200" style="border-style: none">
                 </div>
 
                 <script type="text/javascript">
                   // Function to change the image when hovered
                   function tcd_start_humanaction() {
-                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition_2.png";
+                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition.png";
                   }
 
                   // Function to revert back to the original image
                   function tcd_stop_humanaction() {
-                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition.png";
+                   document.getElementById('humanaction-img').src = "Doc/HumanActionRecognition_2.png";
                   }
                 </script>
                </td>
@@ -732,13 +745,13 @@
                 <br>
                 <a href="https://arxiv.org/pdf/2112.07015">arxiv</a> /
                 <a href="https://www.sciencedirect.com/science/article/pii/S0950705122005378">Elsevier</a> /
-                <a href="data/humanaction.bib">BibTeX</a>
-                <p align="justify">
+                <a href="data/humanaction.bib">BibTeX</a> /
+                <a href="#" onclick="toggleSummary('humanaction'); return false;">Summary</a>
+                <p id="humanaction_summary" align="justify" style="display:none;">
                   We propose a two-phase multi-expert classification method for human action recognition, addressing long-tailed distribution using super-class learning without extra data or manual annotation. A novel Graph-Based Class Selection (GCS) algorithm optimizes class configurations and inter-class dependencies.
                 </p>
                </td>
              </tr>
-
 
              <tr onmouseout="tcd_stop_generalizing()" onmouseover="tcd_start_generalizing()">
                <td style="padding:10px;width:25%;vertical-align:top">
@@ -769,13 +782,13 @@
                 <em>Expert Systems with Applications</em>, 2021.
                 <br>
                 <a href="https://www.sciencedirect.com/science/article/pii/S0957417421008368">Elsevier</a> /
-                <a href="data/autonomous.bib">BibTeX</a>
-                <p align="justify">
+                <a href="data/autonomous.bib">BibTeX</a> /
+                <a href="#" onclick="toggleSummary('autonomous'); return false;">Summary</a>
+                <p id="autonomous_summary" align="justify" style="display:none;">
                   We address the generalization issues in scene understanding for autonomous vehicles by employing GANs for weather modeling, and advanced augmentations, improving object detection robustness and generalization across domains, especially in adverse weather conditions and natural distortions.
                 </p>
                </td>
              </tr>
-
 
               <tr>
                 <td style="padding:10px;width:25%;vertical-align:top">
@@ -792,9 +805,10 @@
                   <br>
                   <a href="https://www.researchgate.net/profile/Hojat-Asgarian-Dehkordi/publication/358999207_Lightweight_Local_Transformer_for_COVID-19_Detection_Using_Chest_CT_Scans/links/624fe178d726197cfd45233b/Lightweight-Local-Transformer-for-COVID-19-Detection-Using-Chest-CT-Scans.pdf">arxiv</a> /
                   <a href="https://ieeexplore.ieee.org/abstract/document/9721517/">IEEE</a> /
-                  <a href="data/covid.bib">BibTeX</a>/
-                <a href="https://www.youtube.com/watch?v=1Xv-gX8jiRU">Video</a>
-                  <p align="justify">This paper introduces a hybrid CNN-Transformer model for COVID-19 diagnosis using CT images, combining local and global feature extraction, and achieving superior performance with limited training data.</p>
+                  <a href="data/covid.bib">BibTeX</a> /
+                <a href="https://www.youtube.com/watch?v=1Xv-gX8jiRU">Video</a> /
+                <a href="#" onclick="toggleSummary('covid'); return false;">Summary</a>
+                  <p id="covid_summary" align="justify" style="display:none;">This paper introduces a hybrid CNN-Transformer model for COVID-19 diagnosis using CT images, combining local and global feature extraction, and achieving superior performance with limited training data.</p>
                 </td>
               </tr>
 
@@ -812,13 +826,14 @@
                   <em>IEEE Access</em>, 2021.
                   <br>
                   <a href="https://ieeexplore.ieee.org/iel7/6287639/9312710/09522137.pdf">IEEE</a> /
-                  <a href="data/semanticseg.bib">BibTeX</a>
-                  <p align="justify">We propose a multi-teacher KD framework in which several expert CNNs, trained on different settings, supervise a lightweight student model. This framework enhances the robustness and performance of the student by using diverse knowledge sources.</p>
+                  <a href="data/semanticseg.bib">BibTeX</a> /
+                  <a href="#" onclick="toggleSummary('semanticseg'); return false;">Summary</a>
+                  <p id="semanticseg_summary" align="justify" style="display:none;">We propose a multi-teacher KD framework in which several expert CNNs, trained on different settings, supervise a lightweight student model. This framework enhances the robustness and performance of the student by using diverse knowledge sources.</p>
                 </td>
               </tr>
 
           <tr onmouseout="imavis_stop()" onmouseover="imavis_start()">
-            <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
+            <td style="padding:10px;padding-top:40px;width:25%;vertical-align:middle; position: relative;">
              <div class="one" style="position: relative; width: 200px; height: auto;">
                <div class="two" id="imavis_video" style="position: absolute; top; left: 0; visibility: hidden; width: 200px; height: auto;">
                 <video width="200" style="border-style: none" muted autoplay loop>
@@ -854,19 +869,17 @@
              <br>
              <a href="https://arxiv.org/pdf/1810.00119">arxiv</a> /
              <a href="https://www.sciencedirect.com/science/article/pii/S0262885619300113">Elsevier</a> /
-             <a href="data/tracking.bib">BibTeX</a>
-             <p align="justify">
+             <a href="data/tracking.bib">BibTeX</a> /
+             <a href="#" onclick="toggleSummary('tracking'); return false;">Summary</a>
+             <p id="tracking_summary" align="justify" style="display:none;">
                This work aims to improve motion and observation models in visual object tracking. We propose a motion estimation network to refine target location predictions, with a Siamese network detecting the most probable candidate. Additionally, a weighting CNN adaptively assigns weights to similarity scores, accounting for target appearance changes.
              </p>
             </td>
           </tr>
 
 
-
-
-
           <tr onmouseout="iccke_stop()" onmouseover="iccke_start()">
-            <td style="padding:10px;width:25%;vertical-align:top: 50px; position: relative;">
+            <td style="padding:10px;padding-top:40px;width:25%;vertical-align:middle; position: relative;">
              <div class="one" style="position: relative; width: 200px; height: auto;">
                <div class="two" id="iccke_gif" style="position: absolute; top: 0; left: 0; visibility: hidden; width: 200px; height: auto;">
                 <img src="Doc/ICCKE_2.gif" alt="Patchwise Object Tracking GIF" width="200" style="border-style: none">
@@ -899,12 +912,11 @@
              <br>
              <a href="https://arxiv.org/pdf/1803.06141">arxiv</a> /
              <a href="https://ieeexplore.ieee.org/document/8167940">IEEE</a> /
-             <a href="data/patchwise.bib">BibTeX</a>
-             <p align="justify">This paper proposes a robust tracking method that exploits relationships between target patches in adjacent frames using a sparse appearance model.</p>
+             <a href="data/patchwise.bib">BibTeX</a> /
+             <a href="#" onclick="toggleSummary('patchwise'); return false;">Summary</a>
+             <p id="patchwise_summary" align="justify" style="display:none;">This paper proposes a robust tracking method that exploits relationships between target patches in adjacent frames using a sparse appearance model.</p>
             </td>
           </tr>
-
-
 
               </tbody>
             </table>
@@ -1144,6 +1156,30 @@ var colors = {
         if (centerFadeDiv) centerFadeDiv.style.display = 'none';
        }
     };
+
+    // Toggle summary visibility
+    function toggleSummary(paperId) {
+      const summaryElement = document.getElementById(paperId + '_summary');
+      if (summaryElement) {
+        if (summaryElement.style.display === 'none' || summaryElement.style.display === '') {
+          summaryElement.style.display = 'block';
+        } else {
+          summaryElement.style.display = 'none';
+        }
+      }
+    }
+
+    // Toggle research details visibility
+    function toggleResearchDetails() {
+      const detailsElement = document.getElementById('research_details');
+      if (detailsElement) {
+        if (detailsElement.style.display === 'none' || detailsElement.style.display === '') {
+          detailsElement.style.display = 'block';
+        } else {
+          detailsElement.style.display = 'none';
+        }
+      }
+    }
   </script>
 </body>
 </html>
