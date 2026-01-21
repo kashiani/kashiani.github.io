@@ -285,6 +285,40 @@
             <table style="width:120%">
               <tbody>
 
+			<tr onmouseout="tcd_stop_promptmad()" onmouseover="tcd_start_promptmad()">
+				<td style="padding:10px;width:25%;vertical-align:top">
+					<div class="image-container">
+						<img id="paper_promptmad" src="Doc/PROMPTMAD.png" alt="Image of PromptMAD Paper" width="200" style="border-style: none">
+					</div>
+
+					<script type="text/javascript">
+						// Function to change the image when hovered (PromptMAD)
+						function tcd_start_promptmad() {
+							document.getElementById('paper_promptmad').src = "Doc/PROMPTMAD.png";
+						}
+
+						// Function to revert back to the original image (PromptMAD)
+						function tcd_stop_promptmad() {
+							document.getElementById('paper_promptmad').src = "Doc/PROMPTMAD.png";
+						}
+					</script>
+				</td>
+				<td style="padding-bottom:35px;width:75%;vertical-align:middle">
+					<a href="https://arxiv.org/abs/" id="PromptMAD_journal">
+						<papertitle style="color:#1772d0;">PromptMAD: Cross-Modal Prompting for Multi-Class Visual Anomaly Localization</papertitle>
+					</a>
+					<br>
+					<strong>Duncan McCain, Hossein Kashiani, Fatemeh Afghah</strong>
+					<br>
+					<em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</em>, 2026.
+					<br>
+					<a href="#">arxiv (coming soon)</a>
+					<p align="justify">
+						We propose PromptMAD, a cross-modal prompting framework for multi-class visual anomaly localization that leverages vision-language models to improve anomaly detection and localization across multiple classes.
+					</p>
+				</td>
+			</tr>
+
 			<tr>
 				<td style="padding:10px;width:25%;vertical-align:top">
 					<img src="Doc/FreqDebias2.png" alt="FreqDebias Paper" width="200" style="border-style: none">
